@@ -23,18 +23,20 @@ public class Role implements Serializable
 	@Column(name = "role_id")
 	private Integer id;
 	@Column(name="role_name",nullable=false)
-	private String roleName = "ROLE_USER";
+	private String roleName;
 	
 	public Role() {
+		this.roleName = "ROLE_USER";
 	}
 	
 	public Role(String roleName) {
 		this.roleName = roleName;
 	}
-	public Role(Integer id, String roleName) {
+
+	public Role(Integer id) {
 		this.id = id;
-		this.roleName = roleName;
 	}
+
 	public Integer getId() {
 		return id;
 	}

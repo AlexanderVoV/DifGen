@@ -33,7 +33,7 @@ public class SecurityUser extends User implements UserDetails
 		
 		Collection<GrantedAuthority> authorities = new ArrayList<>();
 		Set<Role> userRoles = this.getRoles();
-		
+
 		if(userRoles != null)
 		{
 			for (Role role : userRoles) {

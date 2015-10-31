@@ -5,7 +5,6 @@ package com.springapp.web.controllers;
 
 import java.util.List;
 
-import com.springapp.entities.Role;
 import com.springapp.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,12 +17,12 @@ import com.springapp.services.UserService;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/rest/user/")
+@RequestMapping("/user")
 public class UserResource {
 
 	@Autowired
 	private UserService userService;
-	
+
 	@RequestMapping(value="", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public List<User> findAll()
