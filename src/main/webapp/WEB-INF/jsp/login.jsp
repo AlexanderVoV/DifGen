@@ -36,18 +36,18 @@
 			col-sm-offset-1 col-xs-offset-4">Sign In</h2>
 				<div class="form-group">
 					<div class="col-sm-4">
-						<input type="text" id="username" name="username" class="form-control" placeholder="Username" />
+						<input type="text" id="username" name="username" class="form-control" placeholder="Username" required/>
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-sm-4">
-						<input type="password" id="password" name="password" class="form-control" placeholder="Password" />
+						<input type="password" id="password" name="password" class="form-control" placeholder="Password" required/>
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-sm-4">
 						<button type="submit" class="btn btn-primary">Sign In</button>
-						<button class="btn btn-success col-md-offset-2" data-toggle="modal" data-target="#regModal">Sign Up</button>
+						<button class="btn btn-success" data-toggle="modal" data-target="#regModal">Sign Up</button>
 					</div>
 				</div>
 				<div class="row"><h2>${message}</h2></div>

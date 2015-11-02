@@ -4,8 +4,6 @@
 package com.springapp.config;
 
 
-import java.util.Properties;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
@@ -23,7 +21,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @Configuration
 @ComponentScan(basePackages={"com.springapp"},
 		excludeFilters=@ComponentScan.Filter(type=FilterType.REGEX, pattern={"com.springapp.web.*"}))
-@PropertySource(value = { "classpath:application.properties" })
+@PropertySource(value = {"classpath:database.properties"})
 @EnableScheduling
 @EnableAspectJAutoProxy
 @EnableCaching

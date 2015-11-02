@@ -31,7 +31,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter
 		super.addViewControllers(registry);
 		registry.addViewController("registration").setViewName("registration");
 		registry.addViewController("login/form").setViewName("login");		
-		registry.addViewController("welcome").setViewName("welcome");
+		registry.addViewController("main").setViewName("main");
 	}
 
 	@Bean
