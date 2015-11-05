@@ -2,7 +2,7 @@
 <%@include file="taglib.jsp" %>
 <html>
 <head>
-	<title>Log In</title>
+	<title>Sign In</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="/resources/bootstrap/css/bootstrap.css" rel="stylesheet"/>
 	<link href="/resources/css/styles.css" rel="stylesheet"/>
@@ -22,35 +22,34 @@
 			</div>
 		</c:if>
 		<c:if test="${param.logout != null}">
-			<div class="alert alert-success">
+			<div class="alert alert-info">
 				You have been logged out.
 			</div>
 		</c:if>
 	</div>
 	<div class="row">
-		<div class="col-lg-7 col-lg-offset-5 col-md-11
-	col-sm-12 col-sm-offset-4 col-xs-4 col-xs-offset-3">
-			<form:form id="loginForm" method="post" action="${rootURL}login" modelAttribute="user"
-			           class="form-horizontal" role="form">
+		<div class="col-lg-7 col-lg-offset-5 col-md-10
+	col-sm-12 col-sm-offset-4 col-xs-6 col-xs-offset-2">
+			<form:form id="loginForm" method="post" action="/login" modelAttribute="user"
+					   class="form-horizontal" role="form">
 				<h2 class="col-lg-offset-1 col-md-offset-1
-			col-sm-offset-1 col-xs-offset-4">Sign In</h2>
+			col-sm-offset-1 col-xs-12">Sign In</h2>
 				<div class="form-group">
 					<div class="col-sm-4">
 						<input type="text" id="username" name="username" class="form-control" placeholder="Username" required/>
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-4">
+					<div class="col-sm-4 col-xs-12">
 						<input type="password" id="password" name="password" class="form-control" placeholder="Password" required/>
 					</div>
 				</div>
-				<div class="form-group">
-					<div class="col-sm-4">
+				<div class="form-group btn-block">
+					<div class="col-sm-4 col-xs-8 ">
 						<button type="submit" class="btn btn-primary">Sign In</button>
 						<button class="btn btn-success" data-toggle="modal" data-target="#regModal">Sign Up</button>
 					</div>
 				</div>
-				<div class="row"><h2>${message}</h2></div>
 			</form:form>
 			<div class="modal fade" id="regModal">
 				<div class="modal-dialog">
@@ -63,7 +62,7 @@
 						<%--Modal Body--%>
 						<div class="modal-body">
 							<form:form id="regForm" class="form col-md-12 center-block" modelAttribute="user"
-							      role="form">
+									   role="form">
 								<div class="form-group">
 									<input id="rusername" type="text" class="form-control input-lg" placeholder="Username" required/>
 								</div>
@@ -76,7 +75,7 @@
 								</div>
 							</form:form>
 						</div>
-							<div class="modal-footer"></div>
+						<div class="modal-footer"></div>
 					</div>
 				</div>
 			</div>

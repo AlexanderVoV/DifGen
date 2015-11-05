@@ -7,8 +7,8 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users
 (
   id integer NOT NULL,
-  password character varying(255) NOT NULL,
   username character varying(255) NOT NULL,
+  password character varying(255) NOT NULL,
   CONSTRAINT users_pkey PRIMARY KEY (id),
   CONSTRAINT uk_dc4eq7plr20fdhq528twsak1b UNIQUE (username)
 )
