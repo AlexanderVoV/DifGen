@@ -15,6 +15,7 @@
 </head>
 <body>
 <div class="container">
+	<div class="header-panel text-center"><h1>Differences Generator</h1></div>
 	<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
 		<c:if test="${param.error != null}">
 			<div class="alert alert-danger">
@@ -32,8 +33,8 @@
 	col-sm-12 col-sm-offset-4 col-xs-6 col-xs-offset-2">
 			<form:form id="loginForm" method="post" action="/login" modelAttribute="user"
 					   class="form-horizontal" role="form">
-				<h2 class="col-lg-offset-1 col-md-offset-1
-			col-sm-offset-1 col-xs-12">Sign In</h2>
+				<h3 class="col-lg-offset-1 col-md-offset-1
+			col-sm-offset-1 col-xs-12">Sign In</h3>
 				<div class="form-group">
 					<div class="col-sm-4">
 						<input type="text" id="username" name="username" class="form-control" placeholder="Username" required/>
@@ -45,7 +46,7 @@
 					</div>
 				</div>
 				<div class="form-group btn-block">
-					<div class="col-sm-4 col-xs-8 ">
+					<div class="col-sm-4 col-xs-10">
 						<button type="submit" class="btn btn-primary">Sign In</button>
 						<button class="btn btn-success" data-toggle="modal" data-target="#regModal">Sign Up</button>
 					</div>
