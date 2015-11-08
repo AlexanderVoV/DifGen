@@ -25,9 +25,7 @@ public class Role implements Serializable
 	@Column(name="role_name",nullable=false)
 	private String roleName;
 	
-	public Role() {
-		this.roleName = "ROLE_USER";
-	}
+	public Role() {}
 	
 	public Role(String roleName) {
 		this.roleName = roleName;

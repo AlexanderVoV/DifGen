@@ -17,6 +17,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="USERS")
@@ -25,8 +27,16 @@ public class User
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
+
+ 	@Pattern(regexp = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
 	@Column(nullable=false, unique=true)
+	private String email;
+
+	@Size(min = 4, max = 20)
+	@Column(nullable=true)
 	private String username;
+
+	@Size(min = 6, max = 20)
 	@Column(nullable=false)
 	private String password;
 	
@@ -60,6 +70,14 @@ public class User
 		return username;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
@@ -79,5 +97,4 @@ public class User
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
-	
 }

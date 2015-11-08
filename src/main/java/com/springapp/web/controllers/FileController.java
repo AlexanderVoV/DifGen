@@ -75,7 +75,7 @@ public class FileController {
 		ZipOutputStream zipOutputStream = new ZipOutputStream(response.getOutputStream());
 
 		ZipCreator zipCreator = new ZipCreator();
-		zipCreator.zipDir(file, zipOutputStream);
+		zipCreator.zip(file, zipOutputStream);
 		zipOutputStream.close();
 		inputStream.close();
 	}

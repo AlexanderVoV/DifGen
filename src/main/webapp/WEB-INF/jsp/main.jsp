@@ -20,7 +20,7 @@
 		<div class="row text-center"><h1>Differences Generator</h1></div>
 		<div class="row">
 			<div class="col-md-10">
-				<h3>Name: <sec:authentication property="name"/></h3>
+				<h3>Email: <sec:authentication property="name"/></h3>
 			</div>
 			<div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1">
 				<a id="logout" class="btn btn-info" href="${rootUrl}logout">Logout</a>
@@ -30,11 +30,11 @@
 	<div class="row">
 		<form method="post" enctype="multipart/form-data">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 col-xs-offset-1">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-8 col-xs-offset-1">
 					First file: <input type="file" class="file" name="file1">
 					<h4>${file1Message}</h4>
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 col-xs-offset-1">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-8 col-xs-offset-1">
 					Second file: <input type="file" name="file2">
 					<h4>${file2Message}</h4>
 				</div>

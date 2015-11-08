@@ -1,5 +1,10 @@
+function validatForm() {
+
+}
+
 function registration() {
 	var obj = {
+		email: document.getElementById("remail").value,
 		username: document.getElementById("rusername").value,
 		password: document.getElementById("rpassword").value
 	};

@@ -32,8 +32,8 @@ public class UserService {
 		return userRepository.findOne(id);
 	}
 
-	public User login(String username, String password) {
-		return userRepository.findByUsernameAndPassword(username, password);
+	public User login(String email, String password) {
+		return userRepository.findByEmailAndPassword(email, password);
 	}
 
 	public User update(User user) {
@@ -44,8 +44,8 @@ public class UserService {
 		userRepository.delete(id);
 	}
 
-	public User findUserByUsername(String username) {
-		return userRepository.findUserByUsername(username);
+	public User findUserByEmail(String email) {
+		return userRepository.findUserByEmail(email);
 	}
 }
 

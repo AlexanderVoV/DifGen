@@ -22,13 +22,12 @@ public class UserController
 		UserController.userService = userService;
 	}
 	
-	public static User getCurrentUser()
-	{
+	public static User getCurrentUser()	{
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 	    if (principal instanceof UserDetails) 
 	    {
-	    	String username = ((UserDetails) principal).getUsername();
-	    	User loginUser = userService.findUserByUsername(username);
+	    	String email = ((UserDetails) principal).getUsername();
+	    	User loginUser = userService.findUserByEmail(email);
 	    	return new SecurityUser(loginUser);
 	    }
 

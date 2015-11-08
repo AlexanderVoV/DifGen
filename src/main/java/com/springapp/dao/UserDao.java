@@ -15,6 +15,6 @@ public interface UserDao {
 	
 	public User findUserById(int id);
 
-	public User login(String username, String password);
+	public User login(String email, String password);
 	
 }

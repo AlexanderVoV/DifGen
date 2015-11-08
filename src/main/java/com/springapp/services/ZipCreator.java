@@ -7,7 +7,7 @@ import java.util.zip.ZipOutputStream;
 
 public class ZipCreator {
 
-    public void zipDir(File file, ZipOutputStream zos)
+    public void zip(File file, ZipOutputStream zos)
     {
         try
         {

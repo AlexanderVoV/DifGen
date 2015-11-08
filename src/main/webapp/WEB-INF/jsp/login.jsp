@@ -6,12 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="/resources/bootstrap/css/bootstrap.css" rel="stylesheet"/>
 	<link href="/resources/css/styles.css" rel="stylesheet"/>
-	<script type="text/javascript" src="/resources/jquery/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="/resources/bootstrap/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/resources/js/app.js"></script>
-
 </head>
 <body>
 <div class="container">
@@ -28,16 +22,24 @@
 			</div>
 		</c:if>
 	</div>
+
 	<div class="row">
 		<div class="col-lg-7 col-lg-offset-5 col-md-10
 	col-sm-12 col-sm-offset-4 col-xs-6 col-xs-offset-2">
+
+			<div class="row">
+				<div class="col-md-2 col-md-offset-8 col-sm-2 col-sm-offset-6 col-xs-1 col-xs-offset-11">
+					<button class="btn btn-success" data-toggle="modal" data-target="#regModal">Sign Up</button>
+				</div>
+			</div>
+
 			<form:form id="loginForm" method="post" action="/login" modelAttribute="user"
 					   class="form-horizontal" role="form">
 				<h3 class="col-lg-offset-1 col-md-offset-1
 			col-sm-offset-1 col-xs-12">Sign In</h3>
 				<div class="form-group">
 					<div class="col-sm-4">
-						<input type="text" id="username" name="username" class="form-control" placeholder="Username" required/>
+						<input type="text" id="username" name="username" class="form-control" placeholder="Email" required/>
 					</div>
 				</div>
 				<div class="form-group">
@@ -48,10 +50,10 @@
 				<div class="form-group btn-block">
 					<div class="col-sm-4 col-xs-10">
 						<button type="submit" class="btn btn-primary">Sign In</button>
-						<button class="btn btn-success" data-toggle="modal" data-target="#regModal">Sign Up</button>
 					</div>
 				</div>
 			</form:form>
+
 			<div class="modal fade" id="regModal">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -65,10 +67,16 @@
 							<form:form id="regForm" class="form col-md-12 center-block" modelAttribute="user"
 									   role="form">
 								<div class="form-group">
-									<input id="rusername" type="text" class="form-control input-lg" placeholder="Username" required/>
+									<input id="remail" type="text" class="form-control input-md" placeholder="Enter your email" required/>
 								</div>
 								<div class="form-group">
-									<input id="rpassword" type="password" class="form-control input-lg" placeholder="Password" required/>
+									<input id="rusername" type="text" class="form-control input-md" placeholder="Enter your name"/>
+								</div>
+								<div class="form-group">
+									<input id="rpassword" type="password" class="form-control input-md" placeholder="Enter your password" required/>
+								</div>
+								<div class="form-group">
+									<input id="rpassword2" type="password" class="form-control input-md" placeholder="Confirm your password" required/>
 								</div>
 								<div class="form-group">
 									<button id="signUp" type="submit" class="btn btn-success" onclick="registration()">Sign Up</button>
@@ -83,5 +91,11 @@
 		</div>
 	</div>
 </div>
+
+<script src="/resources/jquery/jquery-1.10.2.js"></script>
+<script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/resources/js/app.js"></script>
 </body>
 </html>
