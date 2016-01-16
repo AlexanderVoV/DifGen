@@ -68,7 +68,6 @@ public class FileController {
 
 		File file = new File("result.txt");
 		FileUtils.writeStringToFile(file, fileDiff);
-		InputStream inputStream = new FileInputStream(file);
 
 		response.setContentType("application/zip");
 		response.setHeader("Content-Disposition", "attachment; filename=result.zip");
@@ -77,6 +76,5 @@ public class FileController {
 		ZipCreator zipCreator = new ZipCreator();
 		zipCreator.zip(file, zipOutputStream);
 		zipOutputStream.close();
-		inputStream.close();
 	}
 }

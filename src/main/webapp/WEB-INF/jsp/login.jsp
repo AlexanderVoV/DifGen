@@ -67,16 +67,16 @@
 							<form:form id="regForm" class="form col-md-12 center-block" modelAttribute="user"
 									   role="form">
 								<div class="form-group">
-									<input id="remail" type="text" class="form-control input-md" placeholder="Enter your email" required/>
+									<input id="remail" type="text" class="form-control input-md reg" placeholder="Enter your email" required/>
 								</div>
 								<div class="form-group">
-									<input id="rusername" type="text" class="form-control input-md" placeholder="Enter your name"/>
+									<input id="rusername" type="text" class="form-control input-md reg" placeholder="Enter your name"/>
 								</div>
 								<div class="form-group">
-									<input id="rpassword" type="password" class="form-control input-md" placeholder="Enter your password" required/>
+									<input id="rpassword" type="password" class="form-control input-md reg" placeholder="Enter your password" required/>
 								</div>
 								<div class="form-group">
-									<input id="rpassword2" type="password" class="form-control input-md" placeholder="Confirm your password" required/>
+									<input id="rpassword2" type="password" class="form-control input-md reg" placeholder="Confirm your password" required/>
 								</div>
 								<div class="form-group">
 									<button id="signUp" type="submit" class="btn btn-success" onclick="registration()">Sign Up</button>
